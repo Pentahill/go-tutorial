@@ -34,3 +34,14 @@ func TestFunc(t *testing.T) {
 	timeSpentFunc := timeSpent(slowFun)
 	t.Log(timeSpentFunc(10))
 }
+
+func Clear() {
+	fmt.Println("Clear resource")
+}
+
+func TestDefer(t *testing.T) {
+	defer Clear()
+
+	fmt.Println("start")
+	panic("err")
+}
