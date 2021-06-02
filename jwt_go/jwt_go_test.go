@@ -47,7 +47,7 @@ func TestJWTGo(t *testing.T) {
 
 	claims, err = ParseToken(token, []byte("ac"))
 	if err != nil {
-		fmt.Println("parse error: ", err)
+		fmt.Println("parse error: ", err) //
 	} else {
 		fmt.Println("claims: ", claims)
 	}
