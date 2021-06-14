@@ -2,7 +2,6 @@ package websocket
 
 import (
 	"fmt"
-	"log"
 	"net/http"
 
 	"github.com/gorilla/websocket"
@@ -59,12 +58,12 @@ var upgrader = websocket.Upgrader{
 	WriteBufferSize: 1024,
 }
 
-func main() {
-	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
-		handleWS(w, r)
-	})
-	err := http.ListenAndServe(":8000", nil)
-	if err != nil {
-		log.Fatal("ListenAndServe: ", err)
-	}
-}
+// func main() {
+// 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+// 		handleWS(w, r)
+// 	})
+// 	err := http.ListenAndServe(":8000", nil)
+// 	if err != nil {
+// 		log.Fatal("ListenAndServe: ", err)
+// 	}
+// }
